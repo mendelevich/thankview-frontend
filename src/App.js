@@ -1,10 +1,11 @@
 import React from 'react';
 import './App.css';
+import VideoPlayer from './components/VideoPlayer';
 
 function App() {
   return (
     <div className="App">
-      <p>Project will go here</p>
+      <VideoPlayer />
     </div>
   );
 }
