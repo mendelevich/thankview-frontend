@@ -23,6 +23,12 @@ The code I wrote can be found in:
 > > >
 > > > `/VideoPlayer.js`
 
+Some features that I'm mindful of but was not able to implement in time:
+
+1. Did not reach the part to autoplay the next video.
+2. Trimming the text on the menu items so that they don't overflow.
+3. Did not add as many comments as I would have liked!
+
 _(This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app))_
 
 — Eve Mendelevich
