@@ -1,9 +1,19 @@
+/* I believe body styles are usually set in index.css, but I'm leaving them here for easier reviewing of this exercise */
 body {
   margin: 0;
+  background-color: #101010;
 }
 
 .App {
   display: flex;
+  justify-content: center;
+}
+
+.module {
+  display: flex;
+  width: 900px;
+  height: 500px;
+  margin-top: 20px;
 }
 
 .screen {
@@ -11,6 +21,29 @@ body {
   width: 100%;
 }
 
+#left {
+  background-color: white;
+}
+
 #right {
   background-color: #eee;
+}
+
+#header h1 {
+  font-size: 24px;
+}
+
+.module p {
+  font-size: 16px;
+}
+
+.menu-item {
+  display: flex;
+  justify-content: space-between;
+  border-bottom: 1px solid #edeff0;
+  padding: 0px 20px;
+}
+
+.menu-item:hover {
+  background-color: #d4e2fe;
 }

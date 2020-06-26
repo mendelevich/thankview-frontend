@@ -2,7 +2,7 @@ import React from 'react';
 
 const MenuItem = (props) => {
   return (
-    <div>
+    <div className="menu-item">
       <p>{props.title}</p>
       <p>
         {props.minutes}m {props.seconds}s
