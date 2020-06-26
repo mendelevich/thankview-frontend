@@ -47,3 +47,11 @@ body {
 .menu-item:hover {
   background-color: #d4e2fe;
 }
+
+.video-container {
+  position: absolute;
+}
+
+.hide {
+  display: none;
+}
