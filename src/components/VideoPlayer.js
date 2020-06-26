@@ -2,7 +2,7 @@ import React from 'react';
 
 const VideoPlayer = (props) => {
   // Loads all video players in the beginning, but only shows the first one in the beginning
-  let display = props.idx === 0 ? 'show' : 'hide';
+  let display = props.hide ? 'hide' : '';
 
   return (
     <div className={`video-container ${display}`}>

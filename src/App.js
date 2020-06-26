@@ -6,6 +6,8 @@ import data from './data/walkthroughs.json';
 import MenuItem from './components/MenuItem';
 
 function App() {
+  const [selectedIdx, setSelectedIdx] = React.useState(0);
+
   const countTotalTime = () => {
     let sec = 0;
 
@@ -15,6 +17,10 @@ function App() {
 
     // Here this returns a value of 9m 13s vs 9m 30s in the example
     return `${Math.floor(sec / 60)}m ${sec % 60}s`;
+  };
+
+  const handleMenuClick = (idx) => {
+    setSelectedIdx(idx);
   };
 
   return (
@@ -32,6 +38,8 @@ function App() {
               title={videoData.title}
               minutes={videoData.minutes}
               seconds={videoData.seconds}
+              onClick={handleMenuClick}
+              selected={idx === selectedIdx}
             />
           ))}
         </div>
@@ -39,7 +47,7 @@ function App() {
           {data.map((videoData, idx) => (
             <VideoPlayer
               key={idx}
-              idx={idx}
+              hide={idx !== selectedIdx}
               url={videoData.url}
               thumb={videoData.thumb}
             />

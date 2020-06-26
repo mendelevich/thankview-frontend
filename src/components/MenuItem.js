@@ -6,8 +6,13 @@ const MenuItem = (props) => {
     else return `${num}.`;
   };
 
+  let selected = props.selected ? 'selected' : '';
+
   return (
-    <div className="menu-item">
+    <div
+      className={`menu-item ${selected}`}
+      onClick={() => props.onClick(props.idx)}
+    >
       <p>
         {formatNumber(props.idx + 1)} {props.title}
       </p>

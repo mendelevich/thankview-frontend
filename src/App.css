@@ -48,6 +48,10 @@ body {
   background-color: #d4e2fe;
 }
 
+.selected {
+  background-color: #d4e2fe;
+}
+
 .video-container {
   position: absolute;
 }
