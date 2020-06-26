@@ -1,11 +1,8 @@
 import React from 'react';
 
 const VideoPlayer = (props) => {
-  // Loads all video players in the beginning, but only shows the first one in the beginning
-  let display = props.hide ? 'hide' : '';
-
   return (
-    <div className={`video-container ${display}`}>
+    <div className="video-container">
       {/* Not exact height & width, but didnt have enough time to figure out how to calculate so that it fills up the entire right half of the module. */}
       <video width="450" height="253" controls poster={props.thumb}>
         <source src={props.url} type="video/mp4" />

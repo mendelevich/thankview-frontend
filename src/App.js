@@ -44,14 +44,10 @@ function App() {
           ))}
         </div>
         <div id="right" className="screen">
-          {data.map((videoData, idx) => (
-            <VideoPlayer
-              key={idx}
-              hide={idx !== selectedIdx}
-              url={videoData.url}
-              thumb={videoData.thumb}
-            />
-          ))}
+          <VideoPlayer
+            url={data[selectedIdx].url}
+            thumb={data[selectedIdx].thumb}
+          />
         </div>
       </div>
     </div>
