@@ -5,7 +5,7 @@ To run the code:
 1. Run `npm start`
 2. Go to [http://localhost:3000](http://localhost:3000) in your browser.
 
-The code I wrote can be found:
+The code I wrote can be found in:
 
 > `/src`
 >

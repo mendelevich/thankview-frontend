@@ -26,28 +26,30 @@ function App() {
   return (
     <div className="App">
       <div className="module">
-        <div id="left" className="screen">
-          <div id="header">
-            <h1>ThankView Walkthrough</h1>
-            <p>Total: {countTotalTime()}</p>
+        <div id="container">
+          <div id="left" className="screen">
+            <div id="header">
+              <h1>ThankView Walkthrough</h1>
+              <p>Total: {countTotalTime()}</p>
+            </div>
+            {data.map((videoData, idx) => (
+              <MenuItem
+                key={idx}
+                idx={idx}
+                title={videoData.title}
+                minutes={videoData.minutes}
+                seconds={videoData.seconds}
+                onClick={handleMenuClick}
+                selected={idx === selectedIdx}
+              />
+            ))}
           </div>
-          {data.map((videoData, idx) => (
-            <MenuItem
-              key={idx}
-              idx={idx}
-              title={videoData.title}
-              minutes={videoData.minutes}
-              seconds={videoData.seconds}
-              onClick={handleMenuClick}
-              selected={idx === selectedIdx}
+          <div id="right" className="screen">
+            <VideoPlayer
+              url={data[selectedIdx].url}
+              thumb={data[selectedIdx].thumb}
             />
-          ))}
-        </div>
-        <div id="right" className="screen">
-          <VideoPlayer
-            url={data[selectedIdx].url}
-            thumb={data[selectedIdx].thumb}
-          />
+          </div>
         </div>
       </div>
     </div>
